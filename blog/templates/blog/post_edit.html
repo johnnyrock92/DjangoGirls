@@ -2,7 +2,7 @@
 
 {% block content %}
     <h1>New post</h1>
-    <form method="POST" class="post-form">{% csrf_token %} <!-- csrf_token dba o bezpieczenstwo-->
+    <form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %} <!-- csrf_token dba o bezpieczenstwo-->
         {{ form.as_p }}
         <button type="submit" class="save btn btn-default">Save</button>
     </form>
